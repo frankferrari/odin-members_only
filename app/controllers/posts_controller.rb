@@ -23,7 +23,7 @@ before_action :authenticate_user!, only: [:new, :create]
 
   # Use strong parameters to whitelist allowed attributes
   def post_params
-    params.require(:post).permit(:title, :body, :user_id) # Add :user_id or any other permitted parameters
+    params.require(:post).permit(:title, :body, :name, :user_id) # Add :user_id or any other permitted parameters
   end
 
 end

@@ -4,6 +4,12 @@
   <div>
     <h2><%= link_to post.title, post %></h2>
     <p><%= post.body %></p>
+    
+    <% if user_signed_in? %>
+    <p>Posted by: <%= post.user.name %></p>
+    <% end %>
+  
+  
   </div>
 <% end %>
 
